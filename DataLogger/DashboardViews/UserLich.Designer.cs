@@ -36,7 +36,7 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.Navy;
       this.Name = "UserLich";
-      this.Size = new System.Drawing.Size(248, 180);
+      this.Size = new System.Drawing.Size(350, 350);
       this.ResumeLayout(false);
 
     }

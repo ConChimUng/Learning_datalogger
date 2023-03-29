@@ -51,7 +51,7 @@
       series1.MarkerSize = 10;
       series1.Name = "Chart1";
       this.chart1.Series.Add(series1);
-      this.chart1.Size = new System.Drawing.Size(991, 308);
+      this.chart1.Size = new System.Drawing.Size(704, 308);
       this.chart1.TabIndex = 0;
       this.chart1.Text = "chart1";
       // 
@@ -63,7 +63,7 @@
       this.Controls.Add(this.chart1);
       this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
       this.Name = "UserChart";
-      this.Size = new System.Drawing.Size(991, 308);
+      this.Size = new System.Drawing.Size(704, 308);
       ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
       this.ResumeLayout(false);
 

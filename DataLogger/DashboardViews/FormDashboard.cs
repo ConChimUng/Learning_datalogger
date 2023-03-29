@@ -35,14 +35,14 @@ namespace DataLogger.DashboardViews
     {
       InitializeComponent();
       int id = 0;
-      this.userTemperature.SetData(id, "Temperature", eNum.eProgessBarType.Temperature);
-      this.userSpeed.SetData(id++, "Speed", eNum.eProgessBarType.Speed);
-      //this.userChart1.setDataChart("Chart Line", "Chart1", "AxisX", "AxisY", eTypechart.Spline);
+      this.userControlProgessBarTemperature.SetData(id, "Temperature", eNum.eProgessBarType.Temperature);
+      this.userControlProgessBarSpeed.SetData(id++, "Speed", eNum.eProgessBarType.Speed);
+      this.userChartTemperature.setDataChart("Chart Line", "Chart1", "AxisX", "AxisY", SeriesChartType.Line);
 
-      this.userChart1.setDataChart("Chart Line", "Chart1", "AxisX", "AxisY", SeriesChartType.Line);
+      this.userChartSpeed.setDataChart("Chart Line", "Chart1", "AxisX", "AxisY", SeriesChartType.Spline);
 
-      this.userTemperature.DisplayToUi();
-      this.userSpeed.DisplayToUi();
+      this.userControlProgessBarTemperature.DisplayToUi();
+      this.userControlProgessBarSpeed.DisplayToUi();
 
     }
 
@@ -57,10 +57,11 @@ namespace DataLogger.DashboardViews
       speed = rd.Next(1,50);
       temperature = rd.Next(1,50);
       DateTime dataTime = DateTime.Now;
-      this.userTemperature.ChangeValue(temperature);
-      this.userSpeed.ChangeValue(speed);
-      this.userChart1.ChangeValueChart("Chart1",speed,temperature );
-       
+      this.userControlProgessBarTemperature.ChangeValue(temperature);
+      this.userControlProgessBarSpeed.ChangeValue(speed);
+      this.userChartTemperature.ChangeValueChart("Chart1", speed, temperature);
+      this.userChartSpeed.ChangeValueChart("Chart1", temperature,speed);
+
       tmr1.Start();
        
       
